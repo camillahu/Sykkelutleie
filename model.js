@@ -1,6 +1,8 @@
+const app= document.getElementById("app")
+let inputMsg = "";
 const model = {
     app: {
-        currentPage: "bicycleView",
+        currentPage: "createUserPageView",
         loggedInUser: "Kjell Arnt"
     },
     input: {
@@ -9,6 +11,7 @@ const model = {
             username: "",
             password: "",
             address: "",
+            email: "",
         },
         ownerInput: {
             bicycleId: null,
@@ -21,7 +24,7 @@ const model = {
             bicycleId: null,
             rentStartTime: "21/03/2024 10.30",
         },
-        endRentPage: {
+        userEndRentPage: {
             location: "",
             paymentMethodId: 1,
             confirmedPayment: false,
