@@ -1,37 +1,64 @@
-function  createUser() {
-let newUser = 
+
+function createUser() {
+    let newUser =
     {
-    fullName: model.input.createUserPage.fullName,
-    username: model.input.createUserPage.username,
-    password: model.input.createUserPage.password,
-    address: model.input.createUserPage.address,
-    email: model.input.createUserPage.email,
+        fullName: model.input.createUserPage.fullName,
+        username: model.input.createUserPage.username,
+        password: model.input.createUserPage.password,
+        address: model.input.createUserPage.address,
+        email: model.input.createUserPage.email,
     }
-    
+
 
     model.data.users.push(newUser);
 }
 
-function nameInput(name) {
-    let nameInput = name;
-
-    if (nameInput!= '' && nameInput.contains(' ')) {
+function fullNameInput(name) {
+    if (name != '' && name.includes(' ')) {
         inputMsg = ""
+        model.input.createUserPage.fullName = name;
     } else {
         inputMsg = "You have to type in your full name correctly."
     }
-    
+
+    updateCreateUserPageView();
+
+}
+
+function usernameInput(username) {
+    if (username == '' || username.includes(' ')) {
+        inputMsg = "You have to type in a valid username.";
+    } else {
+        inputMsg = "";
+        model.input.createUserPage.username = username;
+    }
+
     updateCreateUserPageView();
 }
-function usernameInput(username) {
-    model.input.createUserPage.username = username
-}
-function passwordInput() {
+
+function passwordInput(password) {
+    if (password == '' || password.includes(' ')) {
+        inputMsg = "You have to type in a valid password.";
+    } else {
+        inputMsg = "";
+        model.input.createUserPage.password = password;
+    }
+
+    updateCreateUserPageView();
 
 }
-function addressInput() {
 
+function addressInput(address) {
+    model.input.createUserPage.address = address;
+    updateCreateUserPageView();
 }
-function emailInput() {
 
+function emailInput(email) {
+    if (email != '' && email.includes('@')) {
+        inputMsg = ""
+        model.input.createUserPage.email = email;
+    } else {
+        inputMsg = "You have to type in a valid email."
+    }
+    updateCreateUserPageView();
 }
