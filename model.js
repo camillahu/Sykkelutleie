@@ -25,8 +25,8 @@ const model = {
             rentStartTime: "21/03/2024 10.30",
         },
         userEndRentPage: {
-            location: "",
-            paymentMethodId: 1,
+            location: "", //vet ikke om jeg trenger denne? 
+            paymentMethodId: null, 
             confirmedPayment: false,
         },
     },
@@ -34,14 +34,14 @@ const model = {
         bicycles: [
             {
                 bicycleId: 0,
-                color: "red",
+                color: "purple",
                 bicycleModel: "super 1200",
                 location: "Revetal",
                 pricePerHour: 100,
             },
             {
                 bicycleId: 1,
-                color: "blue",
+                color: "red and black",
                 bicycleModel: "super 1400",
                 location: "Moss",
                 pricePerHour: 150,
