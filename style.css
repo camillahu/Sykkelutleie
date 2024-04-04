@@ -104,26 +104,41 @@
 .bicyclePic2 button:hover {
     background-color: rgb(255, 83, 111);
     border: 3px solid black;
-
 }
 
 .uURPWInfo {
-    margin: 20px;
+    scale:150%;
+    margin: 120px;
     width: 350px;
-    border: 5px solid black;
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
     text-align: center;
     height: 370px;
     font-size: large;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    background-color: bisque;
+    background-color: rgb(115, 252, 87);
 }
 .uURPWInfo img {
     margin: 20px auto;
     padding: 10px;
     width: 270px;
-    border: 5px solid black;
+    border: 5px solid rgb(0, 0, 0);
     background-color: white;
+}
+
+.uURPWInfo button{
+    margin: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(2, 196, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+.uURPWInfo button:hover {
+    background-color: rgb(4, 143, 185);
 }
 

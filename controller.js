@@ -11,6 +11,7 @@ function createUser() {
 
 
     model.data.users.push(newUser);
+    updateCreateUserPageView();
 }
 
 function fullNameInput(name) {
@@ -21,7 +22,7 @@ function fullNameInput(name) {
         inputMsg = "You have to type in your full name correctly."
     }
 
-    updateCreateUserPageView();
+    
 
 }
 
@@ -33,7 +34,7 @@ function usernameInput(username) {
         model.input.createUserPage.username = username;
     }
 
-    updateCreateUserPageView();
+    
 }
 
 function passwordInput(password) {
@@ -44,13 +45,13 @@ function passwordInput(password) {
         model.input.createUserPage.password = password;
     }
 
-    updateCreateUserPageView();
+    
 
 }
 
 function addressInput(address) {
     model.input.createUserPage.address = address;
-    updateCreateUserPageView();
+    
 }
 
 function emailInput(email) {
@@ -60,16 +61,33 @@ function emailInput(email) {
     } else {
         inputMsg = "You have to type in a valid email."
     }
-    updateCreateUserPageView();
+  
 }
 
 function getPaymentMethod (chosenPaymentMethod) {
+    let html="";
     if(chosenPaymentMethod == 0) {
-        model.input.userEndRentPage.paymentMethodId = 0;
+        model.input.userEndRentPage.paymentMethodId = 0; 
+        
     } 
     else if (chosenPaymentMethod == 1){
         model.input.userEndRentPage.paymentMethodId = 1;
+        
+        
     } else 
-    {model.input.userEndRentPage.paymentMethodId = 2;}
+    {model.input.userEndRentPage.paymentMethodId = 2;
+        
+        
+    }
+    model.data.messages.rentMessage = `Confirm rent? 
+    <button onclick="getRentStartedMsg()">Yes</button>
+    <button onclick="updateBicyclesView()">No</button>
+    `;
+        updateUserRentPageView();
+}
+
+function setSelectedBike (bikeId){
+    model.app.currentPage=  "user rent page"
+    model.data.selectedBicycleId = bikeId;
     updateUserRentPageView();
 }

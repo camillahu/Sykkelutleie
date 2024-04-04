@@ -1,10 +1,10 @@
 
-updateUserRentPageView(0);
+updateBicyclesView()
 function updateCreateUserPageView() {
     app.innerHTML = /*HTML*/ `
     <div class="cupContainer">
     <h3>Create new user</h3>
-        <form class="cupInputs">
+        <div class="cupInputs">
         <input type="text"  onchange="fullNameInput(this.value)" placeholder="Full name"> <br>
         <input type="text"  onchange="usernameInput(this.value)"placeholder="Username"> <br>
         <input type="text"  onchange="passwordInput(this.value)" placeholder="Password"> <br>
@@ -12,8 +12,8 @@ function updateCreateUserPageView() {
         <input type="text"  onchange="emailInput(this.value)" placeholder="Email"> <br>
         <p class="cupInputMsg">${inputMsg}</p>
 
-        <button type="submit" onclick="${createUser()}">Submit</button>
-        </form>
+        <button type="submit" onclick="createUser()">Submit</button>
+        </div>
     </div>
    `
 }
@@ -33,7 +33,7 @@ function updateBicyclesView() {
     ${model.data.bicycles[0].bicycleModel}. <br>
     Currently located at ${model.data.bicycles[0].location}. <br>
     Price per hour: ${model.data.bicycles[0].pricePerHour}kr.
-    <br> <button onclick="updateUserRentPageView(0)">Rent this bike</button>
+    <br> <button onclick="setSelectedBike(0)">Rent this bike</button>
     </div>
     <div class="bicyclePic2"><img src="sykkel2.jpg"> <br>
     Awesome
@@ -41,13 +41,39 @@ function updateBicyclesView() {
     ${model.data.bicycles[1].bicycleModel}. <br>
     Currently located at ${model.data.bicycles[1].location}. <br>
     Price per hour: ${model.data.bicycles[1].pricePerHour}kr.
-    <br> <button onclick="updateUserRentPageView(1)">Rent this bike</button>
+    <br> <button onclick="setSelectedBike(1)">Rent this bike</button>
     </div>
     
    </div>
    
    `
 }
+
+
+
+function updateUserRentPageView() {
+    let bicycle = model.data.bicycles.find(bicycle=> bicycle.bicycleId == model.data.selectedBikeId)
+    console.log(bicycle)
+        app.innerHTML = /*HTML*/ `
+        <div class="uURPWInfo"><img src=${bicycle.img}> <br>
+    Model: ${bicycle.bicycleModel} <br>
+    Location: ${bicycle.location} <br>
+    Price per hour: ${bicycle.pricePerHour}kr.
+    <br> <button onclick="getPaymentMethod(0)">Visa</button>
+     <button onclick="getPaymentMethod(1)">MasterCard</button>
+     <button onclick="getPaymentMethod(2)">PayPal</button>
+    </div>
+
+    <div>${model.data.messages.rentMessage}</div>
+        
+        `
+
+}
+
+function getRentStartedMsg() {
+    
+}
+
 
 
 function updateOwnerInputView() {
@@ -58,33 +84,10 @@ function updateOwnerInputView() {
    `
 }
 ;
-function updateUserRentPageView(bikeId) {
-    if(bikeId == 0) {
-        app.innerHTML = /*HTML*/ `
-        <div class="uURPWInfo"><img src="sykkel1.jpg"> <br>
-    Model: ${model.data.bicycles[0].bicycleModel} <br>
-    Location: ${model.data.bicycles[0].location} <br>
-    Price per hour: ${model.data.bicycles[0].pricePerHour}kr.
-    <br> <button onclick="getPaymentMethod (0)">Visa</button>
-     <button onclick="getPaymentMethod (1)">MasterCard</button>
-     <button onclick="getPaymentMethod (2)">PayPal</button>
-    </div>
-        
-        `
-    } else if (bikeId == 1) {
-        app.innerHTML = /*HTML*/ `
-   
-        `
-    } else {
-        alert("no bike selected");
-    }
-}
+
 
 function updateUserEndRentPageView() {
     app.innerHTML = /*HTML*/ `
    
    `
 }
-
-// forskjellige view for hver side
-// 

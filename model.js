@@ -26,7 +26,8 @@ const model = {
         },
         userEndRentPage: {
             location: "", //vet ikke om jeg trenger denne? 
-            paymentMethodId: null, 
+            paymentMethodId: null,
+            paymentMethod: ["Visa", "MasterCard", "PayPal" ], //trengs denne?
             confirmedPayment: false,
         },
     },
@@ -38,6 +39,7 @@ const model = {
                 bicycleModel: "super 1200",
                 location: "Revetal",
                 pricePerHour: 100,
+                img: "sykkel1.jpg",
             },
             {
                 bicycleId: 1,
@@ -45,6 +47,7 @@ const model = {
                 bicycleModel: "super 1400",
                 location: "Moss",
                 pricePerHour: 150,
+                img: "sykkel2.jpg",
             },
         ],
         users: [
@@ -63,7 +66,13 @@ const model = {
                 bicycleId: 0,
                 rentStartTime: "",
                 rentStopTime: "",
-            },
+            }
         ],
+        messages: 
+            {rentMessage:  "",
+            
+            },
+        selectedBikeId: -1,
+        
     },
 }
