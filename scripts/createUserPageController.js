@@ -1,4 +1,3 @@
-
 function createUser() {
     let newUser =
     {
@@ -21,9 +20,6 @@ function fullNameInput(name) {
     } else {
         inputMsg = "You have to type in your full name correctly."
     }
-
-    
-
 }
 
 function usernameInput(username) {
@@ -33,8 +29,6 @@ function usernameInput(username) {
         inputMsg = "";
         model.input.createUserPage.username = username;
     }
-
-    
 }
 
 function passwordInput(password) {
@@ -44,8 +38,6 @@ function passwordInput(password) {
         inputMsg = "";
         model.input.createUserPage.password = password;
     }
-
-    
 
 }
 
@@ -62,32 +54,4 @@ function emailInput(email) {
         inputMsg = "You have to type in a valid email."
     }
   
-}
-
-function getPaymentMethod (chosenPaymentMethod) {
-    let html="";
-    if(chosenPaymentMethod == 0) {
-        model.input.userEndRentPage.paymentMethodId = 0; 
-        
-    } 
-    else if (chosenPaymentMethod == 1){
-        model.input.userEndRentPage.paymentMethodId = 1;
-        
-        
-    } else 
-    {model.input.userEndRentPage.paymentMethodId = 2;
-        
-        
-    }
-    model.data.messages.rentMessage = `Confirm rent? 
-    <button onclick="getRentStartedMsg()">Yes</button>
-    <button onclick="updateBicyclesView()">No</button>
-    `;
-        updateUserRentPageView();
-}
-
-function setSelectedBike (bikeId){
-    model.app.currentPage=  "user rent page"
-    model.data.selectedBicycleId = bikeId;
-    updateUserRentPageView();
 }

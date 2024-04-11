@@ -2,7 +2,7 @@ const app= document.getElementById("app")
 let inputMsg = "";
 const model = {
     app: {
-        currentPage: "createUserPageView",
+        page: '',
         loggedInUser: "Kjell Arnt"
     },
     input: {

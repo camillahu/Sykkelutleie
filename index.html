@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kjell sykkelutleie</title>
+
     <link rel="stylesheet" href="style.css">
-    
+
+    <script src="model.js"></script>
+
+    <script src="scripts/mainView.js"></script>
+    <script src="scripts/commonController.js"></script>
+
+    <script src="scripts/bicyclesController.js"></script>
+    <script src="scripts/bicyclesView.js"></script>
+
+    <script src="scripts/createUserPageController.js"></script>
+    <script src="scripts/createUserPageView.js"></script>
+
+    <script src="scripts/userRentPageController.js"></script>
+    <script src="scripts/userRentPageView.js"></script>
+
+    <script src="scripts/endUserRentPageController.js"></script>
+    <script src="scripts/endUserRentPageView.js"></script>
+
+    <script src="scripts/adminInputController.js"></script>
+    <script src="scripts/adminInputView.js"></script>
+
 </head>
 <body>
     <div id="app"></div>
 
-    <script src="model.js"></script>
-    <script defer src="view.js"></script>
-    <script src="controller.js">
-
-        //pga updateview på kontroller-funksjonene for å fange opp data i inputfeltene, 
-        // så blir de borte med en gang man trykker på et nytt felt. 
-
-        //får opp i konsollen: index.html:1 Form submission canceled 
-        // because the form is not connected
-
-        //trenger å gå gjennom hvordan jeg kobler forskjellige views til model
-        //alerten i updateUserRentPageView oppfører seg litt rart
-        //jeg får opp confirm rent før jeg skal på updateUserRentPageView
-
-        //updateUserRentPageView i getPaymentMethod er unreachable?
-
-    </script>
+<!-- Ting som trengs: log in page, admin page, end rent page -->
 
     
 </body>
