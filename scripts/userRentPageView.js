@@ -1,6 +1,7 @@
 function updateUserRentPageView() {
     let bicycle = model.data.bicycles.find(bicycle=> bicycle.bicycleId == model.data.selectedBikeId)
     console.log(bicycle)
+    console.log(model.data.selectedBikeId)
         app.innerHTML = /*HTML*/ `
         <div class="uURPWInfo"><img src=${bicycle.img}> <br>
     Model: ${bicycle.bicycleModel} <br>

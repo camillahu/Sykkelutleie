@@ -10,7 +10,7 @@ function createUser() {
 
 
     model.data.users.push(newUser);
-    updateCreateUserPageView();
+    changePage('bicycles');
 }
 
 function fullNameInput(name) {

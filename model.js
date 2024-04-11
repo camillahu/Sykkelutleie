@@ -2,7 +2,7 @@ const app= document.getElementById("app")
 let inputMsg = "";
 const model = {
     app: {
-        page: '',
+        page: 'createUser',
         loggedInUser: "Kjell Arnt"
     },
     input: {

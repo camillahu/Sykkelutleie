@@ -21,7 +21,7 @@ function getPaymentMethod (chosenPaymentMethod) {
 }
 
 function setSelectedBike (bikeId){
-    model.app.currentPage=  "user rent page"
-    model.data.selectedBicycleId = bikeId;
-    changePage(startRent);
+    console.log(bikeId)
+    model.data.selectedBikeId = bikeId;
+    changePage('startRent');
 }
