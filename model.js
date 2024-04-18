@@ -2,8 +2,8 @@ const app= document.getElementById("app")
 let inputMsg = "";
 const model = {
     app: {
-        page: 'createUser',
-        loggedInUser: "Kjell Arnt"
+        page: '',
+        loggedInUser: "kåre"
     },
     input: {
         createUserPage: {
@@ -12,6 +12,10 @@ const model = {
             password: "",
             address: "",
             email: "",
+        },
+        logIn: {
+            username: "",
+            password:"",
         },
         ownerInput: {
             bicycleId: null,
@@ -53,11 +57,19 @@ const model = {
         users: [
             {
                 userId: 0,
-                fullName: "Kåre",
-                username: "heipådeg",
-                password: "1234",
+                fullName: "Kåre Kåresen",
+                username: "kåre",
+                password: "password",
                 address: "Lia 12",
-                timesRented: 0,
+                timesRented: 3,
+            },
+            {
+                userId: 1,
+                fullName: "Bernt Berntsen",
+                username: "bernt",
+                password: "password",
+                address: "Lia 13",
+                timesRented: 1,
             }
         ],
         rentEvents: [
