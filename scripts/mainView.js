@@ -25,8 +25,6 @@ function getRentStartedMsg() {
     
 }
 
-// Vil få side-navigeringen til å funke, er litt forvirra
-
 // Starte på get rent started og en timer. 
 
 

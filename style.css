@@ -172,3 +172,16 @@
     background-color: aqua;
 }
 
+.LISignUpDiv {
+    user-select: none;
+}
+.LISignUpSpan  {
+    text-decoration: underline;
+    color: blue;
+}
+.LISignUpSpan:hover  {
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+}
+

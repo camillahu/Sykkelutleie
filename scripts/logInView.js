@@ -13,10 +13,9 @@ function updateLogInView() {
         placeholder="passord"
         >
         <button onclick="logIn()">Logg in</button>
-        
-    
+
+        <div class="LISignUpDiv">Don't have an account? <span onclick="changePage('createUser')" class="LISignUpSpan">Sign up</span> today!</div>
+        <div>${model.data.messages.logInErrorMessage}</div>
     </div>
     `
 }
-
-//neste: funksjonalitet her

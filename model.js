@@ -4,6 +4,7 @@ const model = {
     app: {
         page: '',
         loggedInUser: null,
+        isAdmin: false,
     },
     input: {
         createUserPage: {
@@ -57,6 +58,14 @@ const model = {
         users: [
             {
                 userId: 0,
+                fullName: "Kåre Arnt Bernard Fjodåsen",
+                username: "admin",
+                password: "password",
+                address: "Lia 27",
+                timesRented: 0,
+            },
+            {
+                userId: 1,
                 fullName: "Kåre Kåresen",
                 username: "kåre",
                 password: "password",
@@ -64,13 +73,14 @@ const model = {
                 timesRented: 3,
             },
             {
-                userId: 1,
+                userId: 2,
                 fullName: "Bernt Berntsen",
                 username: "bernt",
                 password: "password",
                 address: "Lia 13",
                 timesRented: 1,
-            }
+            },
+                
         ],
         rentEvents: [
             {
@@ -82,7 +92,7 @@ const model = {
         ],
         messages: 
             {rentMessage:  "",
-            
+            logInErrorMessage: "",
             },
         selectedBikeId: -1,
         
