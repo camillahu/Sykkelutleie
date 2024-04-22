@@ -2,7 +2,7 @@ function logIn (){
 
     for(let user of model.data.users) {
         if(model.input.logIn.username === user.username && model.input.logIn.password === user.password) {
-            model.app.loggedInUser == user;
+            model.app.loggedInUser = user;
             model.input.logIn.username = '';
             model.input.logIn.password = '';
             model.app.page = 'bicycles';
