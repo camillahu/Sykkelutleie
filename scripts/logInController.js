@@ -1,5 +1,17 @@
-function logIn (usernameInput, passwordInput){
+function logIn (){
 
+    for(let user of model.data.users) {
+        if(model.input.logIn.username === user.username && model.input.logIn.password === user.password) {
+            model.app.loggedInUser == user;
+            model.input.logIn.username = '';
+            model.input.logIn.password = '';
+            model.app.page = 'bicycles';
+            updateMainView();
+            return true;
+        }
+    }
+    alert('wrong username or password');
+    return false;
 }
 
 function setUsernameInput(usernameInput) {
@@ -8,22 +20,3 @@ function setUsernameInput(usernameInput) {
 function setPasswordInput(passwordInput) {
     model.input.logIn.password= passwordInput;
 }
-
-function checkIfUsernameExixts() {
-    return model.data.users.some(user => user.username === model.input.logIn.username );  
-    // denne sjekker om det finnes en bruker med dette brukernavnet. Den returnerer true dersom usernameInput finnes i arrayet. Hvis ikke, returnerer den false. 
-}
-
-function checkIfPasswordRight() {
-    const user = model.data.users.find(user => user.username === model.input.logIn.username);
-
-    if (user) {
-        return user.password === model.input.logIn.password;
-    }
-    else {
-        console.log("username does'nt exist") 
-    }
-}
-
-
-//hæææ

@@ -3,7 +3,7 @@ let inputMsg = "";
 const model = {
     app: {
         page: '',
-        loggedInUser: "kåre"
+        loggedInUser: null,
     },
     input: {
         createUserPage: {
