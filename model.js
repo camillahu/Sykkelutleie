@@ -2,9 +2,10 @@ const app= document.getElementById("app")
 let inputMsg = "";
 const model = {
     app: {
-        page: '',
+        page: 'bicycles',
         loggedInUser: null,
         isAdmin: false,
+        currentBike: null,
     },
     input: {
         createUserPage: {
@@ -40,16 +41,16 @@ const model = {
         bicycles: [
             {
                 bicycleId: 0,
-                color: "purple",
-                bicycleModel: "super 1200",
+                color: "Purple",
+                bicycleModel: "Super 1200",
                 location: "Revetal",
                 pricePerHour: 100,
                 img: "sykkel1.jpg",
             },
             {
                 bicycleId: 1,
-                color: "red and black",
-                bicycleModel: "super 1400",
+                color: "Red and black",
+                bicycleModel: "Super 1400",
                 location: "Moss",
                 pricePerHour: 150,
                 img: "sykkel2.jpg",
@@ -94,7 +95,6 @@ const model = {
             {rentMessage:  "",
             logInErrorMessage: "",
             },
-        selectedBikeId: -1,
         
     },
 }
